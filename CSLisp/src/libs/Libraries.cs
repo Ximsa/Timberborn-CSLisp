@@ -18,10 +18,11 @@ namespace CSLisp.Libs
         public static void LoadStandardLibraries (Context ctx) {
             var allLibs = GetAllBuiltInLibraries();
             foreach (byte[] libBytes in allLibs) {
-                using var stream = new MemoryStream(libBytes);
-                using var reader = new StreamReader(stream);
-                string libText = reader.ReadToEnd();
-                LoadLibrary(ctx, libText);
+                using (var stream = new MemoryStream(libBytes))
+                using (var reader = new StreamReader(stream)) {
+                    string libText = reader.ReadToEnd();
+                    LoadLibrary(ctx, libText);
+                }
             }
         }
 

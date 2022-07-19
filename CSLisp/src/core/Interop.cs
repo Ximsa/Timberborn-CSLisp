@@ -112,12 +112,13 @@ namespace CSLisp.Core
             }
 
             var obj = current.AsObjectOrNull;
-            return obj switch {
-                Namespace ns => TryNamespaceLookup(ns, nextSymbol, nonSymbols),
-                Type type => TryLookupOnType(type, nextSymbol, nonSymbols),
-                object other => TryLookupOnInstance(other, nextSymbol, nonSymbols),
-                _ => throw new InteropError($"Not sure what to do with current {current}"),
-            };
+            switch (obj) {
+                case Namespace ns: return TryNamespaceLookup(ns, nextSymbol, nonSymbols);
+                case Type type: return TryLookupOnType(type, nextSymbol, nonSymbols);
+                case object other: return TryLookupOnInstance(other, nextSymbol, nonSymbols);
+                default:
+                    throw new InteropError($"Not sure what to do with current {current}");
+            }
         }
 
         /// <summary>
@@ -155,19 +156,23 @@ namespace CSLisp.Core
         }
 
 
-        private static object LookupStaticFieldOrProp (MemberInfo fieldOrProp, object[] args = null) =>
-            fieldOrProp switch {
-                FieldInfo fi => fi.GetValue(null),
-                PropertyInfo pi => pi.GetValue(null, BindingFlags.Static, null, args, null),
-                _ => throw new InteropError($"Unknown type of {fieldOrProp}"),
-            };
+        private static object LookupStaticFieldOrProp (MemberInfo fieldOrProp, object[] args = null) {
+            switch (fieldOrProp) {
+                case FieldInfo fi: return fi.GetValue(null);
+                case PropertyInfo pi: return pi.GetValue(null, BindingFlags.Static, null, args, null);
+                default:
+                    throw new InteropError($"Unknown type of {fieldOrProp}");
+            }
+        }
 
-        private static object LookupInstanceFieldOrProp (MemberInfo fieldOrProp, object instance, object[] args = null) =>
-            fieldOrProp switch {
-                FieldInfo fi => fi.GetValue(instance),
-                PropertyInfo pi => pi.GetValue(instance, BindingFlags.Instance, null, args, null),
-                _ => throw new InteropError($"Unknown type of {fieldOrProp}"),
-            };
+        private static object LookupInstanceFieldOrProp (MemberInfo fieldOrProp, object instance, object[] args = null) {
+            switch (fieldOrProp) {
+                case FieldInfo fi: return fi.GetValue(instance);
+                case PropertyInfo pi: return pi.GetValue(instance, BindingFlags.Instance, null, args, null);
+                default:
+                    throw new InteropError($"Unknown type of {fieldOrProp}");
+            }
+        }
 
         /// <summary>
         /// Finds an instance member, either the field/property, or a method name

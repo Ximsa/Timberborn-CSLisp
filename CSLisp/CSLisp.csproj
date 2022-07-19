@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>CSLisp</AssemblyTitle>
     <Copyright>Copyright (C) Robert Zubek</Copyright>
     <Version>0.8.0</Version>
