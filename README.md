@@ -2,6 +2,7 @@ TimberLisp
 =======
 
 TimberLisp adds CSLisp to Timberborn by adding a (minimalist) nREPl server. You can connect to it via localhost:1111
+https://mod.io/g/timberborn/m/timberlisp
 
 CSLisp
 =======
