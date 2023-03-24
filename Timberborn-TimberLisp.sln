@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timberborn-TimberLisp", "Timberborn-Quadruple-Terrain-Height\Timberborn-TimberLisp.csproj", "{6D558863-1886-4AD6-9AEB-0E5108363284}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C532974-D8E3-436D-939F-31BB56465CBF} = {7C532974-D8E3-436D-939F-31BB56465CBF}
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSLisp", "..\..\..\source\repos\CSLisp\CSLisp\CSLisp.csproj", "{4989AB18-5BA0-4CB3-9D62-59D751A2C60A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSLisp", "CSLisp\CSLisp.csproj", "{7C532974-D8E3-436D-939F-31BB56465CBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +20,10 @@ Global
 		{6D558863-1886-4AD6-9AEB-0E5108363284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D558863-1886-4AD6-9AEB-0E5108363284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D558863-1886-4AD6-9AEB-0E5108363284}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4989AB18-5BA0-4CB3-9D62-59D751A2C60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4989AB18-5BA0-4CB3-9D62-59D751A2C60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4989AB18-5BA0-4CB3-9D62-59D751A2C60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4989AB18-5BA0-4CB3-9D62-59D751A2C60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C532974-D8E3-436D-939F-31BB56465CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C532974-D8E3-436D-939F-31BB56465CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C532974-D8E3-436D-939F-31BB56465CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C532974-D8E3-436D-939F-31BB56465CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
