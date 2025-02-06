@@ -7,7 +7,6 @@ namespace Timberborn.TimberLisp
     [Context("MainMenu")]
     class TimberLispConfigurator : Configurator
     {
-
         public override void Configure () => Bind<REPL>().AsSingleton();
     }
 }
