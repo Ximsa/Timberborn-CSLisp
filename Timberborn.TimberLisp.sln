@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timberborn-TimberLisp", "Timberborn-Quadruple-Terrain-Height\Timberborn-TimberLisp.csproj", "{6D558863-1886-4AD6-9AEB-0E5108363284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timberborn.TimberLisp", "Timberborn.TimberLisp\Timberborn.TimberLisp.csproj", "{6D558863-1886-4AD6-9AEB-0E5108363284}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7C532974-D8E3-436D-939F-31BB56465CBF} = {7C532974-D8E3-436D-939F-31BB56465CBF}
 	EndProjectSection
